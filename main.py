@@ -1,3 +1,5 @@
+score = 0
+total = 0
 print("Welcome to the times tables tester!")
 print("What times tables would you like to be tested on?")
 times_table = int(input())
@@ -9,5 +11,9 @@ for x in range(1,max_value + 1):
   answer = int(input())
   if answer == x * times_table:
     print("Correct!")
+    score = score + 1
+    total = total + 1
   else:
     print("Incorrect.")
+    total = total + 1
+print(f"You got {score} questions correct out of {total}!")
